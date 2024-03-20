@@ -1,0 +1,363 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Cores do Site */
+:root {
+    /* Cores principais */
+    --cor-primaria: #2367ac;
+    /* Header */
+    --cor-secundaria: #ffffff;
+    /* Cinza claro suave - Para detalhes sutis e bordas */
+    --cor-suave: #6e888a;
+    /* Branco - Fundo geral */
+    --cor-texto: #333333;
+    /* Preto - Cor principal do texto */
+    --cor-link: #000000;
+    /* Azul - Corrgb(0, 0, 0)inks */
+    --cor-destaque_hover: #244680;
+}
+
+body {
+    background-color: #ecf0f1;
+    overflow-x: hidden  ;
+}
+
+
+h1,
+h2,
+h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+}
+
+#carrosel img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.container {
+    max-width: 75%;
+    margin: 0 auto;
+}
+
+.container h2 {
+    text-align: left;
+    color: #2367ac;
+    font-size: 36px;
+    padding-bottom: 36px;
+}
+
+.logo_img {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+}
+
+header .container {
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header {
+    position: relative;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 2px 0;
+    background: var(--cor-secundaria);
+}
+
+.navegation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-block: 18px;
+    /* Altura da linha gradiente */
+    width: 100%;
+    transition: all 0.5s;
+}
+
+.navegation ul {
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+}
+
+.navegation ul>li {
+    list-style: none;
+}
+
+.navegation ul li a {
+    color: var(--cor-texto);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    font-weight: 500;
+    text-decoration: solid;
+    transition: all 0.5s;
+}
+
+.navegation ul li a:hover {
+    color: #527bb0;
+}
+
+/*Sobre a loja*/
+
+.loja {
+    width: 90%;
+    align-items: center;
+}
+
+.loja .sobre_nos {
+    display: inline-block;
+    font-size: 1.2em;
+    margin-top: 37px;
+}
+
+.loja .sobre_nos img {
+    display: inline-block;
+    border-radius: 4px;
+    width: 500px;
+    margin-right: 10px;
+    margin-bottom: 2%;
+}
+
+.sobre_nos .text_sobre h2 {
+    display: block;
+    margin-bottom: 32px;
+}
+
+.sobre_nos .text_sobre p {
+    display: inline-block;
+    text-align: justify;
+    margin-top: 3%;
+    padding-bottom: 3%;
+
+}
+
+.text_sobre h2 {
+    /* padding-top: 10px; */
+    padding-bottom: 10px;
+    font-size: 36px;
+    text-decoration: none;
+    color: var(--cor-primaria);
+    border-bottom: 3px solid var(--cor-suave);
+    font-style: italic;
+}
+
+/*Produtos*/
+
+.container_produtos {
+    text-align: center;
+    width: 25%;
+    display: inline-block;
+}
+
+article {
+    display: inline-block;
+    margin: 35px;
+}
+
+article h3,
+p,
+strong {
+    padding-top: 8px;
+}
+
+.tenis {
+    position: relative;
+    top: 0;
+    display: flex;
+    background-color: #ffffff;
+    border-radius: 16px;
+}
+
+.tenis:hover {
+    top: -4px;
+    box-shadow: 0 4px 4px #999;
+    transition: all .2s ease-in-out;
+}
+
+.tenis img {
+    width: 350px;
+    height: 250px;
+}
+
+.tenis h3 {
+    padding-bottom: 10px;
+    font-size: 36px;
+    text-decoration: none;
+    color: var(--cor-primaria);
+    border-bottom: 3px solid var(--cor-suave);
+    font-style: italic;
+}
+
+.tenis h3 {
+    margin-top: 2%;
+    margin-bottom: 3%;
+}
+
+button {
+    display: block;
+    width: 350px;
+    padding: 8px 0;
+    border: none;
+    background: rgb(72, 72, 172);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+button:hover {
+    background-color: var(--cor-destaque_hover);
+    color: var(--cor-secundaria);
+}
+
+/*Footer*/
+
+footer {
+    text-align: center;
+    padding-bottom: 20px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+footer li {
+    list-style: none;
+    margin-left: 16px;
+}
+
+footer li img {
+    height: 32px;
+}
+
+.container-flex {
+
+    padding-top: 32px;
+    display: flex;
+    text-decoration: none;
+    justify-content: center;
+}
+
+/* Código para mostrar 4 produtos por linha*/
+
+.container_produto {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+/* Estilos específicos para telas até 640px */
+@media only screen and (max-width: 640px) {
+    .menu {
+        display: flex;
+    }
+
+    .nav-menu {
+        position: fixed;
+        right: -100%;
+        top: 70px;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        background: var(--cor-secundaria);
+        gap: -10px;
+        transition: all 0.3s;
+    }
+
+    .nav-menu.ativo {
+        right: 0;
+    }
+
+    .nav-item {
+        margin: 16px 0;
+    }
+
+    .nav-item a {
+        text-decoration: none;
+        font-size: 17px;
+        font-weight: 500;
+    }
+
+
+    .loja {
+        display: block;
+    }
+
+    .container {
+        max-width: 90%;
+    }
+
+    .loja .sobre-nos {
+        display: flex;
+        font-size: 1em;
+        margin-top: 48px;
+    }
+
+    .loja .sobre-nos img {
+        max-width: 100%;
+        margin-right: 0;
+        margin-bottom: 2%;
+    }
+
+    .minha-grid ul {
+        display: flex;
+    }
+
+
+    .container-flex li h3 {
+        font-size: 32px;
+    }
+
+}
+
+/* Estilos específicos para telas maiores que 641px e menores que 1024px */
+@media only screen and (min-width: 641px)and (max-width: 1023px) {
+
+    .container {
+        max-width: 90%;
+ }
+
+    .loja {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .loja .sobre-nos {
+        display: block;
+    }
+
+    .loja .sobre-nos a img {
+        max-width: 100%;
+    }
+
+    .minha-grid .container-flex {
+        grid-template-columns: repeat(2, 49%);
+    }
+
+    .loja .sobre-nos img {
+        max-width: 100%;
+        margin-right: 0;
+        margin-bottom: 2%;
+    }
+
+    .container-flex li h3 {
+        font-size: 32px;
+    }
+
+}
